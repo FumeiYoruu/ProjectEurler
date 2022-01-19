@@ -1,16 +1,15 @@
 def div(x):
     #calculate the  cycle length
-    pro = []
-    #store the remainders that have existed
+    #store the remainders that have existed with the dictionary nums
     nums = {}
     length = -1
     re = 10
     while re:
         an = int(re/x)
-        pro.append(an)
         length+=1
         re -= an * x
         if not re in nums.keys():
+            #store the new remainder
             nums[re] = length
         else:
             #return if the remainder recurs
@@ -22,7 +21,9 @@ d = 2
 ans = 0
 num = 0
 while d<1000:
+    #see the length of the cycle for every number smaller than 1000
     i = div(d)
+    #find the longest one
     if (i > ans):
         ans = i
         num = d
