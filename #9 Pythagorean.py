@@ -5,5 +5,6 @@ for c1 in range(499):
     for a1 in range(int((1000-c)/2)):
         a=a1+1
         b=1000-c-a
+        #test if the three numbers satisfied the phythagorean theorum
         if (c**2==a**2+b**2):
             print(a*b*c)
